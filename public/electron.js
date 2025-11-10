@@ -21,10 +21,14 @@ function createWindow() {
       : `file://${path.join(__dirname, "../build/index.html")}`
   );
 
+
+/* Abrir Inspeccionar */
   if (isDev) mainWindow.webContents.openDevTools();
 
   mainWindow.on("closed", () => (mainWindow = null));
 }
+/* ------------------ */
+
 
 app.on("ready", createWindow);
 
