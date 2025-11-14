@@ -31,7 +31,7 @@ export default function LoggedNavigation() {
         <h1>LoggedNavigation</h1>
         <hr></hr>
 
-{/*         <Card>
+{         {/* <Card>
           <CardContent>
             <CardHeader>Recent Activity</CardHeader>
           </CardContent>
@@ -68,7 +68,7 @@ export default function LoggedNavigation() {
               </FeedEvent>
             </Feed>
           </CardContent>
-        </Card> */}
+        </Card> */} }
     </div>
   )
 }

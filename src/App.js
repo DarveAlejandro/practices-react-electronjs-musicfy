@@ -20,7 +20,6 @@ export default function App() {
   onAuthStateChanged(auth, (user) => {
     setUser( {user} );
   });
-
   
   // -----------------------------------------------------------
   // Component View.
