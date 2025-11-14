@@ -1,5 +1,7 @@
 import React from 'react'
-import {
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Album, Albums, Artist, Artists, Auth, Home, Profile } from "../pages";
+/* import {
   FeedSummary,
   FeedLabel,
   FeedEvent,
@@ -9,15 +11,27 @@ import {
   CardContent,
   Card,
   Feed,
-} from 'semantic-ui-react'
+} from 'semantic-ui-react' */
 
 export default function LoggedNavigation() {
   return (
     <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/auth" element={<Auth/>}/>
+          <Route path="/album/:id" element={<Album/>}/>
+          <Route path="/albums" element={<Albums/>}/>
+          <Route path="/artist/:id" element={<Artist/>}/>
+          <Route path="/artists" element={<Artists/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+        </Routes>
+      </BrowserRouter>
+
         <h1>LoggedNavigation</h1>
         <hr></hr>
 
-        <Card>
+{/*         <Card>
           <CardContent>
             <CardHeader>Recent Activity</CardHeader>
           </CardContent>
@@ -54,7 +68,7 @@ export default function LoggedNavigation() {
               </FeedEvent>
             </Feed>
           </CardContent>
-        </Card>
+        </Card> */}
     </div>
   )
 }

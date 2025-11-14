@@ -1,9 +1,5 @@
 // ------------------------------------------
 // Re-export default components.
 // -----------------------------------------
-export { default as Albums } from "./Artists";
+export { default as Artists } from "./Artists";
 
-// ------------------------------------------
-// Export named Components.
-// ------------------------------------------
-export * from "./Artists";

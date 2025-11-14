@@ -1,9 +1,5 @@
 // ------------------------------------------
 // Re-export default components.
 // ------------------------------------------
-export { default as auth } from "./Home";
+export { default as Home } from "./Home";
 
-// ------------------------------------------
-// Export named Components.
-// ------------------------------------------
-export * from "./Home";

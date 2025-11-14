@@ -1,9 +1,4 @@
 // ------------------------------------------
 // Re-export default components.
 // ------------------------------------------
-export { default as auth } from "./Profile";
-
-// ------------------------------------------
-// Export named Components.
-// ------------------------------------------
-export * from "./Profile";
+export { default as Profile } from "./Profile";

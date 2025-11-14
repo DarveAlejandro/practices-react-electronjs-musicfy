@@ -1,5 +1,5 @@
 import React from 'react'
-import {
+/* import {
   TableRow,
   TableHeaderCell,
   TableHeader,
@@ -8,14 +8,14 @@ import {
   Header,
   Table,
   Rating,
-} from 'semantic-ui-react'
+} from 'semantic-ui-react' */
 
 export default function PublicNavigation() {
   return (
     <div>
       <h1>PublicNavigation</h1>
 
-      <Table celled padded>
+{/*       <Table celled padded>
         <TableHeader>
           <TableRow>
             <TableHeaderCell singleLine>Evidence Rating</TableHeaderCell>
@@ -68,7 +68,7 @@ export default function PublicNavigation() {
           </TableRow>
         </TableBody>
     </Table>
-
+ */}
   </div>
   )
 }

@@ -7,8 +7,6 @@ import "./scss/global.scss";
 import { LoggedNavigation, PublicNavigation } from "./routes";
 
 
-
-
 export default function App() {
 
   // -----------------------------------------------------------
@@ -20,7 +18,7 @@ export default function App() {
 
   // Asigna a user el usuario auth de firebase
   onAuthStateChanged(auth, (user) => {
-    setUser(user);
+    setUser( {user} );
   });
 
   
