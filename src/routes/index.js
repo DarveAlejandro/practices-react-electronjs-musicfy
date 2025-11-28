@@ -2,11 +2,11 @@
 // Re-export default components.
 // ------------------------------------------
 
-export { default as LoggedNavigation } from "./LoggedNavigation";
-export { default as PublicNavigation } from "./PublicNavigation";
+export { default as Admin } from "./Admin";
+export { default as Public } from "./Public";
 
 // ------------------------------------------
 // Export named Components.
 // ------------------------------------------
-export * from "./LoggedNavigation";
-export * from "./PublicNavigation";
+export * from "./Admin";
+export * from "./Public";
