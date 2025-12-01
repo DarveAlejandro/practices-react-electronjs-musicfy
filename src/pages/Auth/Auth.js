@@ -1,4 +1,4 @@
-import React, { useState }from 'react'
+import React, { useState } from 'react'
 import "./Auth.scss";
 import { AuthOptions, LoginForm, RegisterForm} from "../../components/Auth"
 
@@ -9,29 +9,22 @@ export default function Auth() {
   // Atributes && Methods.
   // -----------------------------------------------------------   
 
-  const [formToRender,setFormToRender] = useState(null);
+  const [formToRender,setFormToRender] = useState("openAuthOptions");
 
-  const openAuthOptions = () => setFormToRender("Login");
-  const openLogin       = () => setFormToRender("Login");
-  const openRegister    = () => setFormToRender("Login");
-  const goBack          = () => setFormToRender(null);
-
-    if(formToRender === "AuthOptions"){
-      return <AuthOptions/>
-    }if(formToRender === "Login"){
-      return <LoginForm/>
-    }if(formToRender === "register"){
-      return <RegisterForm/>  
-    }
-  }
-
+  const openLogin = () => setFormToRender("openLogin");
+  const openRegister = () => setFormToRender("openRegister");
+  const goBack = () => setFormToRender(null);
 
   // -----------------------------------------------------------
   // View.
-  // -----------------------------------------------------------   
-  return (
-    <div>
-        {getFormToRender()}
-    </div>
-  )
+  // -----------------------------------------------------------  
+
+    if(formToRender === "openAuthOptions"){
+      return <AuthOptions openLogin={openLogin} openRegister={openRegister} />
+    }if(formToRender === "openLogin"){
+      return <LoginForm goBack={goBack} openRegister={openRegister}/>
+    }if(formToRender === "openRegister"){
+      return <RegisterForm goBack={goBack} openLogin={openLogin}/>  
+    }
 }
+
