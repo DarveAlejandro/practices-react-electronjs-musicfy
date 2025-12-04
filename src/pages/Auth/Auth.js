@@ -13,7 +13,7 @@ export default function Auth() {
 
   const openLogin = () => setFormToRender("openLogin");
   const openRegister = () => setFormToRender("openRegister");
-  const goBack = () => setFormToRender(null);
+  const goBack = () => setFormToRender("openAuthOptions");
 
   // -----------------------------------------------------------
   // View.
