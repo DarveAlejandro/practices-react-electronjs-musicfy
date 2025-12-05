@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from "semantic-ui-react";
+import "./AuthOptions.scss";
 
 export default function AuthOptions(props) {
 
@@ -14,12 +15,12 @@ export default function AuthOptions(props) {
   // -----------------------------------------------------------  
 
   return (
-    <div style={{background: "#b2b8afff"}}>
+    <div className="auth-options">
 
         <h1>Inicia Sesión en Musicfy</h1>
 
-        <Button primary onClick={openLogin}>Login</Button>
-        <Button secondary onClick={openRegister}>Register</Button>
+        <Button className="register" onClick={openRegister}>Registrate Gratis</Button>
+        <Button className="login" onClick={openLogin}>Inicia Sesi&oacute;n</Button>
     </div> 
   )
 }
