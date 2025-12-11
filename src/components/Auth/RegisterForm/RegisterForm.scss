@@ -1,3 +1,11 @@
-.bg-register-form{
-    background-color: cyan;
+@import url("../../../scss/index.scss"); /* Estilos generales  */
+
+.register-form{
+    
+    margin-top: 50px;
+
+}
+
+.form-field{
+    margin-top: 5px;
 }
