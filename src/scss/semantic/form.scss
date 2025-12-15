@@ -1,12 +1,29 @@
+
 .ui.form{
-
     .field{
-        // Tag/ elemento input html 
-        input{
+        .ui.input{
 
-            background-color: $secondary-background;
+            input{
+                background-color: $background-secondary;
+                border-color: $background-secondary;
+                color: $font-light;
+
+                &:hover, // Sombrear el elemento
+                &:focus, // Estar sobre el elemento
+                &:active // Clickear el elemento
+                {
+                    background-color:$background-secondary;
+                }
+
+
+            }
+
+            i {
+                color: $font-light;
             }
         }
-
-
     }
+}
+
+
+

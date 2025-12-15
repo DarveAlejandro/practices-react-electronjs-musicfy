@@ -1,6 +1,6 @@
 import React from 'react'
-import "./RegisterForm.scss";
 import { Form, Icon } from "semantic-ui-react";
+import "./RegisterForm.scss";
 
 export default function RegisterForm( props ) {
 
@@ -15,17 +15,17 @@ export default function RegisterForm( props ) {
   // -----------------------------------------------------------  
   return (
     
-    <div className="bg-register-form">
+    <div className="register-form">
       <h1>¡Empieza a escuchar con una cuenta de Musicfy Gratis!</h1>
-      <form className="register-form">
-        <Form.Input  class="form-field"
+      <Form>
+        <Form.Input className="form-field"
           type="text"
           placeholder="Correo Electronico" 
           icon="mail outline"
           fluid
         />
         <Form.Input className="form-field"
-          type="text"
+          type="password"
           placeholder="Contraseña" 
           icon={<Icon name="eye" link onClick={ () => console.log("Show Password") }/>}
           fluid
@@ -33,13 +33,13 @@ export default function RegisterForm( props ) {
         <Form.Input className="form-field"
           type="text"
           placeholder="¿Como deberiamos llamarte?" 
-          icon=" user circle outline"
+          icon="user circle outline"
           fluid
         />
-        <Form.Button type="submit" primary className="form-field">
+        <Form.Button type="submit" primary className="form-field" fluid>
             Continuar
         </Form.Button>
-      </form>
+      </Form>
     </div>
   )
 }

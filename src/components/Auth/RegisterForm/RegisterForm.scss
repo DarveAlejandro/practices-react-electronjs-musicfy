@@ -1,11 +1,20 @@
-@import url("../../../scss/index.scss"); /* Estilos generales  */
+@import "../../../scss/index.scss"; /* Estilos generales  */
+
 
 .register-form{
     
     margin-top: 50px;
 
+        >h1{
+            color: $font-light;
+            text-align: center;
+            font-size: 35px;
+            padding-bottom: 20px;
+        }
 }
 
 .form-field{
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
+
+
