@@ -28,8 +28,8 @@
             }
         }
 
-        .button {
-
+        .ui.button.primary{
+            background-color: $primary;
             text-transform: uppercase;
             border-radius: 50px;
             letter-spacing: 3px;

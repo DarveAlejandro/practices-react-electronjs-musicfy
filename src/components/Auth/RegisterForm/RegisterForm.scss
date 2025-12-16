@@ -12,6 +12,10 @@
             padding-bottom: 20px;
         }
 
+        button{
+            // Pendiente de estilos propios del register form.
+        }
+
     &__options{
 
         margin-top: 50px;
@@ -30,7 +34,7 @@
             &:last-of-type{
 
                 span{
-                    
+
                     color: $font-grey;
                     cursor: pointer;
                     text-decoration: underline;
