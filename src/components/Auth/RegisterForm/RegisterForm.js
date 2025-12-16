@@ -42,7 +42,7 @@ export default function RegisterForm( props ) {
       </Form>
 
       <div className="register-form__options">
-          <p onClick={goBack}>Volver</p>
+          <p onClick={goBack}>Volver</p> 
           <p>
             ¿Ya tienes Musicfy?
             <span onClick={openLogin}>
