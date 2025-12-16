@@ -1,5 +1,10 @@
 
 .ui.form{
+
+    // ------------------------------------------------------------
+    // Campos formulario Semantic.
+    // ------------------------------------------------------------
+
     .field{
         .ui.input{
 
@@ -28,6 +33,32 @@
             text-transform: uppercase;
             border-radius: 50px;
             letter-spacing: 3px;
+        }
+    }
+
+    // ------------------------------------------------------------
+    // ERROR - Campos formulario Semantic.
+    // ------------------------------------------------------------
+
+    .field.error{
+        .ui.input{
+            input{
+
+                background-color: $background-secondary;
+                border: 1px solid $danger;
+                color: $danger;
+
+                &:hover, // Sombrear el elemento
+                &:focus, // Estar sobre el elemento
+                &:active // Clickear el elemento
+                {
+                    background-color:$background-secondary;
+                }
+            }
+
+            i{
+                color: $danger;
+            }
         }
     }
 }

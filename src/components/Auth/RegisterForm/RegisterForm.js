@@ -22,19 +22,17 @@ export default function RegisterForm( props ) {
           type="text"
           placeholder="Correo Electronico" 
           icon="mail outline"
-          fluid
+          error={true}
         />
         <Form.Input className="form-field"
           type="password"
           placeholder="Contraseña" 
           icon={<Icon name="eye" link onClick={ () => console.log("Show Password") }/>}
-          fluid
         />
         <Form.Input className="form-field"
           type="text"
           placeholder="¿Como deberiamos llamarte?" 
           icon="user circle outline"
-          fluid
         />
         <Form.Button type="submit" primary className="form-field" fluid>
             Continuar
