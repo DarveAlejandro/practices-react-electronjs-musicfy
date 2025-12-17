@@ -3,6 +3,7 @@ import { Form, Icon } from "semantic-ui-react";
 import "./RegisterForm.scss";
 import { useFormik } from "formik";
 import { initialValues } from './RegisterForm.data';
+import { validationSchema } from './RegisterForm.schema';
 
 
 export default function RegisterForm( props ) {
@@ -23,7 +24,7 @@ export default function RegisterForm( props ) {
   })
 
   // -----------------------------------------------------------
-  // Atributes && Methods.
+  // Component View.
   // -----------------------------------------------------------  
   return (
     
