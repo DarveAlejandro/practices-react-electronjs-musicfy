@@ -2,9 +2,7 @@ import React from 'react'
 import { Form, Icon } from "semantic-ui-react";
 import "./RegisterForm.scss";
 import { useFormik } from "formik";
-import { initialValues } from './RegisterForm.data';
-import { validationSchema } from './RegisterForm.schema';
-
+import { initialValues, validationSchema } from './RegisterForm.data';
 
 export default function RegisterForm( props ) {
 
@@ -16,13 +14,15 @@ export default function RegisterForm( props ) {
 
   const formik = useFormik({
     initialValues: initialValues(),
+    validationSchema: validationSchema(),
+    validateOnChange: false,
     onSubmit: (formValue) => {
-
       console.log('Registro Ok');
       console.log(formValue);
     }
   })
 
+  console.log(formik.errors);
   // -----------------------------------------------------------
   // Component View.
   // -----------------------------------------------------------  
@@ -38,8 +38,7 @@ export default function RegisterForm( props ) {
           onChange={formik.handleChange}
           placeholder="Correo Electronico" 
           icon="mail outline"
-          error={true}
-          
+          error={formik.errors.email}
         />
         <Form.Input className="form-field"
           name="password"
@@ -48,6 +47,7 @@ export default function RegisterForm( props ) {
           icon={<Icon name="eye" link onClick={ () => console.log("Show Password") }/>}
           value={formik.values.password}
           onChange={formik.handleChange}
+          error={formik.errors.password}
         />
         <Form.Input className="form-field"
           name="username"
@@ -56,8 +56,9 @@ export default function RegisterForm( props ) {
           icon="user circle outline"
           value={formik.values.username}
           onChange={formik.handleChange}
+          error={formik.errors.username}
         />
-        <Form.Button type="submit" primary className="form-field" fluid>
+        <Form.Button type="submit" primary className="form-field" fluid loading={formik.isSubmitting}>
             Continuar
         </Form.Button>
       </Form>
